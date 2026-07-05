@@ -176,9 +176,9 @@ region_header() {
 # 禁用读取 /etc/resolv.conf（由下方自定义上游接管）
 no-resolv
 
-# 默认上游 DNS（普通流量走这里，国内用户推荐阿里/腾讯 DNS）
-server=223.5.5.5
-server=119.29.29.29
+# 默认上游 DNS（普通流量走国外 DNS，避免国内污染影响解锁判断）
+server=1.1.1.1
+server=8.8.8.8
 
 # DNS 缓存
 cache-size=2048
