@@ -43,7 +43,7 @@
 将 `<DNS_IP>` 替换为你的解锁 DNS 服务器地址：
 
 ```bash
-sed -i 's/<DNS_IP>/10.0.0.1/g' etc/dnsmasq.conf
+sed -i 's/<DNS_IP>/你的解锁DNS服务器IP/g' etc/dnsmasq.conf
 ```
 
 ### 3️⃣ 📥 部署到 dnsmasq
@@ -90,7 +90,7 @@ lsattr /etc/resolv.conf
   ./sync-upstream.sh
 
   # 指定路径和 DNS IP，一键生成可用配置
-  ./sync-upstream.sh -d ../mihomo-rules/ruleset --dns-ip 10.0.0.1
+  ./sync-upstream.sh -d ../mihomo-rules/ruleset --dns-ip <你的解锁DNS>
 ```
 
 ## ⚙️ 工作原理
