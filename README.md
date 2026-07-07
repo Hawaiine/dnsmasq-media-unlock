@@ -83,11 +83,20 @@ lsattr /etc/resolv.conf
   -d, --rules-dir DIR   mihomo-rules 规则集目录（默认: ~/mihomo-rules/ruleset）
   -o, --output FILE     输出文件路径（默认: ./etc/dnsmasq.conf）
   --dns-ip IP           解锁 DNS IP（默认: <DNS_IP>，留作占位符）
+  --dry-run             仅输出到 stdout，不写入文件
+  --diff                对比现有文件，显示差异（不写入）
+  --check               验证上游规则集的域名合法性
   -h, --help            显示帮助
 
 示例:
   # 默认路径，生成占位符配置
   ./sync-upstream.sh
+
+  # 预览生成内容，不写入文件
+  ./sync-upstream.sh --dry-run
+
+  # 对比上次生成的配置
+  ./sync-upstream.sh --diff
 
   # 指定路径和 DNS IP，一键生成可用配置
   ./sync-upstream.sh -d ../mihomo-rules/ruleset --dns-ip <你的解锁DNS>
